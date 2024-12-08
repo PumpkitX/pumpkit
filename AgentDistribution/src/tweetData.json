@@ -1,0 +1,50 @@
+{
+  "token_name": "SampleToken",
+  "social_insights": {
+    "time_period": "2024-12-01 to 2024-12-07",
+    "tweets": {
+      "total_posts": 152,
+      "unique_authors": 45,
+      "impressions": 230000,
+      "sentiment_analysis": {
+        "positive": 65,
+        "neutral": 30,
+        "negative": 7
+      },
+      "top_trending_tags": ["#SampleToken", "#Crypto", "#Blockchain"]
+    },
+    "engagement": {
+      "likes": 1900,
+      "retweets": 450,
+      "comments": 120
+    },
+    "reach_threshold": {
+      "target_impressions": 250000,
+      "current_percentage": 92
+    }
+  },
+  "distribution_strategy": {
+    "ai_decision": "distribute_in_phases",
+    "recommended_phases": [
+      {
+        "phase": 1,
+        "start_date": "2024-12-08",
+        "tokens_to_distribute": 3000,
+        "condition": "Impressions reach 250,000 or tweets > 200"
+      },
+      {
+        "phase": 2,
+        "start_date": "2024-12-15",
+        "tokens_to_distribute": 2000,
+        "condition": "Maintain positive sentiment > 60%"
+      },
+      {
+        "phase": 3,
+        "start_date": "2024-12-22",
+        "tokens_to_distribute": 5000,
+        "condition": "Total engagement exceeds 3,000 interactions"
+      }
+    ],
+    "comments": "Based on the current metrics, distributing tokens in phases will maximize community engagement and prevent oversupply."
+  }
+}
