@@ -1,0 +1,29 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: 500
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: anvil
+    source:
+      address: "0xf5059a5d33d5853360d16c683c16e67980206f36"
+      abi: Contract
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Token
+        - Action
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: NewTokenDataCreated(indexed uint32,string,string)
+          handler: handleNewTokenDataCreated
+        - event: TokenDataResponded(indexed uint32,string,string,bytes32,addres)
+          handler: handleTokenDataResponded
+      file: ./src/contract.ts

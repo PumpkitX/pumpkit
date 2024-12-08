@@ -1,0 +1,15 @@
+type Token @entity(immutable: false) {
+  id: Bytes!
+  tokenDataIndex: BigInt! # uint32
+  chainName: String! # string
+  blockNumber: BigInt!
+  isEligible: Bytes # bytes32
+  actions: [Action!]! @derivedFrom(field: "token")
+}
+
+
+type Action @entity(immutable: false){
+  id: Bytes!
+  token: Token!
+  actionData: String
+}
