@@ -1,0 +1,28 @@
+{
+  "name": "lit-proj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @dotenvx/dotenvx run -- ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
+  "dependencies": {
+    "@coinbase/coinbase-sdk": "^0.11.2",
+    "@dotenvx/dotenvx": "^1.28.0",
+    "@lit-protocol/auth-helpers": "^7.0.1",
+    "@lit-protocol/contracts-sdk": "^7.0.1",
+    "@lit-protocol/lit-auth-client": "^7.0.1",
+    "@lit-protocol/lit-node-client": "^7.0.1",
+    "ethers": "5.7.2"
+  }
+}
